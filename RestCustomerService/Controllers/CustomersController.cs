@@ -14,10 +14,10 @@ namespace RestCustomerService.Controllers
     {
         private static List<Customer> custList = new List<Customer>()
         {
-            new Customer(),
-            new Customer(),
-            new Customer()
-        });
+            new Customer(){Id = 1234, FirstName = "Jens", LastName = "Jensen", YearOfreg = 1988},
+            new Customer(){Id = 7895, FirstName = "Tyga", LastName = "Tasten", YearOfreg = 1999},
+            new Customer(){Id = 5555, FirstName = "Stuart" LastName"Startdust" YearOfReg =2000}
+        };
 
         // GET: api/Customers
         [HttpGet]
