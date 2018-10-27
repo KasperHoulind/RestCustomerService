@@ -16,14 +16,21 @@ namespace RestCustomerService.Controllers
         {
             new Customer(){Id = 1234, FirstName = "Jens", LastName = "Jensen", YearOfreg = 1988},
             new Customer(){Id = 7895, FirstName = "Tyga", LastName = "Tasten", YearOfreg = 1999},
-            new Customer(){Id = 5555, FirstName = "Stuart" LastName"Startdust" YearOfReg =2000}
+            new Customer(){Id = 5555, FirstName = "Stuart",LastName = "Stardust", YearOfreg = 2000}
         };
 
         // GET: api/Customers
         [HttpGet]
         public IEnumerable<string> Get()
         {
-            return custList;
+            foreach (var Customer in custList)
+            {
+                return custList
+            }
+            
+                
+            
+            
         }
 
         // GET: api/Customers/5
