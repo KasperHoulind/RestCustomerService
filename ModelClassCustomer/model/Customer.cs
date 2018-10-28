@@ -6,10 +6,10 @@ namespace ModelClassCustomer.model
 {
     public class Customer
     {
-        public int _Id;
-        public string _FirstName;
-        public string _LastName;
-        public int _YearOfreg;
+        private int _Id;
+        private string _FirstName;
+        private string _LastName;
+        private int _YearOfreg;
 
         public int Id
         {

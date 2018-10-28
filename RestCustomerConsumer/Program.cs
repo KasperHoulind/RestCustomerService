@@ -10,21 +10,21 @@ namespace RestCustomerConsumer
 {
     class Program
     {
-        public IList<Customer> GetCustomers()
-        {
-            using (HttpClient client = new HttpClient())
-            {
-                string content = client.GetStringAsync(CustomersUri).Result;
-                IList<Customer> cList = JsonConvert.DeserializeObject<IList<Customer>>(content);
-                return cList;
-            }
-        }
+        //public IList<Customer> GetCustomers()
+        //{
+        //    using (HttpClient client = new HttpClient())
+        //    {
+        //        string content = client.GetStringAsync(CustomersUri).Result;
+        //        IList<Customer> cList = JsonConvert.DeserializeObject<IList<Customer>>(content);
+        //        return cList;
+        //    }
+        //}
 
-        static void Main(string[] args)
-        {
-         CustomersController customer = new CustomersController();
-            customer.Start();
+        //static void Main(string[] args)
+        //{
+        // CustomersController customer = new CustomersController();
+        //    customer.Start();
 
-        }
+        //}
     }
 }
