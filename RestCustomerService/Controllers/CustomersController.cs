@@ -12,7 +12,7 @@ namespace RestCustomerService.Controllers
     [ApiController]
     public class CustomersController : ControllerBase
     {
-        private static List<Customer> custList = new List<Customer>()
+        private static List<Customer> cList = new List<Customer>()
         {
             new Customer(){Id = 1234, FirstName = "Jens", LastName = "Jensen", YearOfreg = 1988},
             new Customer(){Id = 7895, FirstName = "Tyga", LastName = "Tasten", YearOfreg = 1999},
@@ -21,11 +21,12 @@ namespace RestCustomerService.Controllers
 
         // GET: api/Customers
         [HttpGet]
-        public IEnumerable<string> Get()
+        [Route("api/Customers")]
+        public List<Customer> Get()
         {
-            foreach (var Customer in custList)
+            foreach (Customer Customer in cList)
             {
-                return custList
+                return cList;
             }
             
                 
@@ -56,6 +57,11 @@ namespace RestCustomerService.Controllers
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
+        }
+
+        public void Start()
+        {
+            
         }
     }
 }
